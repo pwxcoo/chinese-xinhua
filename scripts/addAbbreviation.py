@@ -10,5 +10,5 @@ def abbreviation(pinyin):
 
 chengyu['abbreviation'] = chengyu['pinyin'].apply(abbreviation)
 
-chengyu.to_json('chengyu01.json', force_ascii=False, orient='records')
+chengyu.to_json('idiom.json', force_ascii=False, orient='records')
     
