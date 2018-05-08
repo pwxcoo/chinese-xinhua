@@ -82,18 +82,18 @@ chinese-xinhua/
 - `type=idiom` 表示需要请求成语
 - `word=兴高采烈 ` 表示请求的成语
 ```
-http://pwxcoo.com/dictionary?type=idiom&word=兴高采烈   
+https://www.pwxcoo.com/dictionary?type=idiom&word=兴高采烈   
 ```
-[示例一](http://pwxcoo.com/dictionary?type=idiom&word=%E5%85%B4%E9%AB%98%E9%87%87%E7%83%88)
+[示例一](https://www.pwxcoo.com/dictionary?type=idiom&word=%E5%85%B4%E9%AB%98%E9%87%87%E7%83%88)
 
 #### 示例2（请求拼音首字母缩写）：
 需要两个参数
 - `type=idiom` 表示需要请求成语
 - `word=xgcl ` 表示请求的成语拼音首字母缩写
 ```
-http://pwxcoo.com/dictionary?type=idiom&abbreviation=xgcl   
+https://www.pwxcoo.com/dictionary?type=idiom&abbreviation=xgcl   
 ```
-[示例二](http://pwxcoo.com/dictionary?type=idiom&abbreviation=xgcl)
+[示例二](https://www.pwxcoo.com/dictionary?type=idiom&abbreviation=xgcl)
 
 ### 歇后语
 
@@ -102,9 +102,9 @@ http://pwxcoo.com/dictionary?type=idiom&abbreviation=xgcl
 - `type=xiehouyu` 表示需要请求歇后语
 - `riddle=王婆 ` 表示请求的歇后语的语面。可以模糊匹配
 ```
-http://pwxcoo.com/dictionary?type=xiehouyu&riddle=王婆   
+https://www.pwxcoo.com/dictionary?type=xiehouyu&riddle=王婆   
 ```
-[示例一](http://pwxcoo.com/dictionary?type=xiehouyu&riddle=%E7%8E%8B%E5%A9%86)
+[示例一](https://www.pwxcoo.com/dictionary?type=xiehouyu&riddle=%E7%8E%8B%E5%A9%86)
 
 ### 汉字
 
@@ -113,7 +113,7 @@ http://pwxcoo.com/dictionary?type=xiehouyu&riddle=王婆
 - `type=word` 表示需要请求汉字
 - `word=吴` 表示请求的汉字
 ```
-http://pwxcoo.com/dictionary?type=word&word=吴   
+https://www.pwxcoo.com/dictionary?type=word&word=吴   
 ```
-[示例一](http://pwxcoo.com/dictionary?type=word&word=%E5%90%B4)
+[示例一](https://www.pwxcoo.com/dictionary?type=word&word=%E5%90%B4)
 
