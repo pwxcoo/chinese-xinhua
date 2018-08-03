@@ -1,7 +1,7 @@
 # chinese-xinhua
-中华新华字典数据库和API。收录包括 14032 条歇后语，16142 个汉字，31648 个成语。
+中华新华字典数据库和 API 。收录包括 14032 条歇后语，16142 个汉字，264434 个词语，31648 个成语。
 
-对性能没需求的话，可以用我的新华字典API。所有的数据放在 data/ 目录。
+对性能没需求的话，可以用我的新华字典 API 。所有的数据放在 data/ 目录。
 
 # Project Structure
 ```
@@ -18,6 +18,10 @@ chinese-xinhua/
 |  +- word.json <-- 汉字
 |  |
 |  +- xiehouyu.json <-- 歇后语
+|  |
+|  +- ci.json <-- 词语
+|  |
+|  +- ci.csv <-- 词语（csv 版本）
 |
 +- scripts/ <-- 脚本文件夹
 |  |
@@ -28,11 +32,13 @@ chinese-xinhua/
 |  +- word.py <-- 下载汉字脚本
 |  |
 |  +- xiehouyu.py <-- 下载歇后语脚本
+|  |
+|  +- ci.py <-- 下载词语脚本
 ```
 
 ## 数据库介绍
 ### 成语（idiom.json)
-```
+```json
 [
     {
         "derivation": "语出《法华经·法师功德品》下至阿鼻地狱。”",
@@ -46,8 +52,19 @@ chinese-xinhua/
 ]
 ```
 
-### 汉字（word.json)
+### 词语（ci.json)
+```json
+[
+    { 
+        "ci": "宸纶", 
+        "explanation": "1.帝王的诏书﹑制令。" 
+    },
+    ...
+]
 ```
+
+### 汉字（word.json)
+```json
 [
     {
         "word": "嗄",
@@ -62,8 +79,13 @@ chinese-xinhua/
 ]
 ```
 
-### 歇后语（xiehouyu.json)
+### 词语（ci.json)
+```json
+
 ```
+
+### 歇后语（xiehouyu.json)
+```json
 [
     {
         "riddle": "飞机上聊天",
