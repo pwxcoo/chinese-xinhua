@@ -36,8 +36,8 @@ chinese-xinhua/
 |  +- ci.py <-- 下载词语脚本
 ```
 
-## 数据库介绍
-### 成语（idiom.json)
+# 数据库介绍
+## 成语（idiom.json)
 ```json
 [
     {
@@ -52,7 +52,7 @@ chinese-xinhua/
 ]
 ```
 
-### 词语（ci.json)
+## 词语（ci.json)
 ```json
 [
     { 
@@ -63,7 +63,7 @@ chinese-xinhua/
 ]
 ```
 
-### 汉字（word.json)
+## 汉字（word.json)
 ```json
 [
     {
@@ -79,12 +79,12 @@ chinese-xinhua/
 ]
 ```
 
-### 词语（ci.json)
+## 词语（ci.json)
 ```json
 
 ```
 
-### 歇后语（xiehouyu.json)
+## 歇后语（xiehouyu.json)
 ```json
 [
     {
@@ -95,11 +95,11 @@ chinese-xinhua/
 ]
 ```
 
-## API 接口
+# API 接口
 `GET`、`POST`均可。用`GET`做示例，`POST`同理。返回数据格式为`JSON`。
-### 成语
+## 成语
 
-#### 示例1（直接请求成语）：
+### 示例1（直接请求成语）：
 需要两个参数
 - `type=idiom` 表示需要请求成语
 - `word=兴高采烈 ` 表示请求的成语
@@ -108,7 +108,7 @@ https://www.pwxcoo.com/dictionary?type=idiom&word=兴高采烈
 ```
 [示例一](https://www.pwxcoo.com/dictionary?type=idiom&word=%E5%85%B4%E9%AB%98%E9%87%87%E7%83%88)
 
-#### 示例2（请求拼音首字母缩写）：
+### 示例2（请求拼音首字母缩写）：
 需要两个参数
 - `type=idiom` 表示需要请求成语
 - `word=xgcl ` 表示请求的成语拼音首字母缩写
@@ -117,9 +117,9 @@ https://www.pwxcoo.com/dictionary?type=idiom&abbreviation=xgcl
 ```
 [示例二](https://www.pwxcoo.com/dictionary?type=idiom&abbreviation=xgcl)
 
-### 歇后语
+## 歇后语
 
-#### 示例1（请求歇后语）：
+### 示例1（请求歇后语）：
 需要两个参数
 - `type=xiehouyu` 表示需要请求歇后语
 - `riddle=王婆 ` 表示请求的歇后语的语面。可以模糊匹配
@@ -128,9 +128,9 @@ https://www.pwxcoo.com/dictionary?type=xiehouyu&riddle=王婆
 ```
 [示例一](https://www.pwxcoo.com/dictionary?type=xiehouyu&riddle=%E7%8E%8B%E5%A9%86)
 
-### 汉字
+## 汉字
 
-#### 示例1（直接请求汉字）：
+### 示例1（直接请求汉字）：
 需要两个参数
 - `type=word` 表示需要请求汉字
 - `word=吴` 表示请求的汉字
@@ -139,3 +139,7 @@ https://www.pwxcoo.com/dictionary?type=word&word=吴
 ```
 [示例一](https://www.pwxcoo.com/dictionary?type=word&word=%E5%90%B4)
 
+# Copyright Notice
+所有的数据都是我从网上找的。仓库本来的目的是因为我以前想做一个成语接龙的东西，但是苦于没有现成可用的数据库，自己就从各个网站抓取整理了一份。放在 Github 是为了方便自己的使用，同时也能方便有类似需求的人不用去做这些 trival 的工作。所有抓取数据的脚本都在仓库里。
+
+**本仓库无任何商业目的！如果有侵权行为，请联系我！请不要把我抓走！**
