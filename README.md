@@ -79,11 +79,6 @@ chinese-xinhua/
 ]
 ```
 
-## 词语（ci.json)
-```json
-
-```
-
 ## 歇后语（xiehouyu.json)
 ```json
 [
