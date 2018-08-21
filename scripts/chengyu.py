@@ -8,8 +8,10 @@ description: 抓取下载成语并保存
 
 """
 
-import requests, json
+import json
+import requests
 from bs4 import BeautifulSoup
+
 
 def downloader(url):
     """
@@ -20,9 +22,10 @@ def downloader(url):
     if response.status_code != 200:
         print(f'{url} is failed!')
         return
-    
+
     print(f'{url} is parsing')
-    html = BeautifulSoup(response.content.decode('gbk', errors='ignore'), "lxml")
+    html = BeautifulSoup(response.content.decode('gbk', errors='ignore'),
+                         "lxml")
     table = html.find_all('table')[-2]
 
     prefix = 'http://www.zd9999.com'
@@ -36,14 +39,22 @@ def downloader(url):
             print(f'{words[i]} is failed!')
             continue
 
-        wordhtml = BeautifulSoup(response.content.decode('gbk', errors='ignore'), "lxml")
+        wordhtml = BeautifulSoup(
+            response.content.decode('gbk', errors='ignore'), "lxml")
         explanation = wordhtml.find_all('table')[-3].find_all('tr')
-        res.append({'word':explanation[0].text.strip(),\
-                    'pinyin': explanation[1].find_all('tr')[0].find_all('td')[1].text.strip(),\
-                    'explanation': explanation[1].find_all('tr')[1].find_all('td')[1].text.strip(),\
-                    'derivation': explanation[1].find_all('tr')[2].find_all('td')[1].text.strip(),\
-                    'example': explanation[1].find_all('tr')[3].find_all('td')[1].text.strip()})
+        res.append({'word': explanation[0].text.strip(), \
+                    'pinyin': explanation[1].find_all('tr')[0].find_all('td')[
+                        1].text.strip(), \
+                    'explanation':
+                        explanation[1].find_all('tr')[1].find_all('td')[
+                            1].text.strip(), \
+                    'derivation':
+                        explanation[1].find_all('tr')[2].find_all('td')[
+                            1].text.strip(), \
+                    'example': explanation[1].find_all('tr')[3].find_all('td')[
+                        1].text.strip()})
     return res
+
 
 if __name__ == '__main__':
     res = downloader('http://www.zd9999.com/cy/')

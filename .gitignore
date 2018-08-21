@@ -2,3 +2,5 @@
 /.vscode
 __pycache__
 error.csv
+.idea/
+.python-version

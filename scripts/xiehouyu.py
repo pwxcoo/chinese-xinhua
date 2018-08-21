@@ -8,10 +8,12 @@ description: 抓取下载歇后语并保存
 
 """
 
-import requests, json
+import json
+import requests
 from bs4 import BeautifulSoup
 
-destination_site = ['http://xhy.5156edu.com/html2/xhy.html', 'http://xhy.5156edu.com/html2/xhy_2.html']
+destination_site = ['http://xhy.5156edu.com/html2/xhy.html',
+                    'http://xhy.5156edu.com/html2/xhy_2.html']
 
 
 def downloader(url):
@@ -25,7 +27,9 @@ def downloader(url):
     print(f'{url} is parsing')
     html = BeautifulSoup(response.content.decode('gbk'), "lxml")
     tr = html.find('table', style='word-break:break-all').find_all('tr')
-    return [{'riddle':t.find_all('td')[0].text, 'answer':t.find_all('td')[1].text} for t in tr][1:]
+    return [{'riddle': t.find_all('td')[0].text,
+             'answer': t.find_all('td')[1].text} for t in tr][1:]
+
 
 if __name__ == '__main__':
     res = downloader('http://xhy.5156edu.com/html2/xhy.html')
