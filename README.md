@@ -106,7 +106,7 @@ https://www.pwxcoo.com/dictionary?type=idiom&word=兴高采烈
 ### 示例2（请求拼音首字母缩写）：
 需要两个参数
 - `type=idiom` 表示需要请求成语
-- `word=xgcl ` 表示请求的成语拼音首字母缩写
+- `abbreviation=xgcl` 表示请求的成语拼音首字母缩写
 ```
 https://www.pwxcoo.com/dictionary?type=idiom&abbreviation=xgcl   
 ```
