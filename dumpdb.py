@@ -35,7 +35,7 @@ def save_word():
             word.radicals = item['radicals']
             word.explanation = item['explanation']
             word.more = item['more']
-            word.save()
+            word.save_if_not_exist()
 
 
 def save_phrase():
@@ -45,7 +45,6 @@ def save_phrase():
             phrase = Phrase()
             phrase.word = item['ci']
             phrase.explanation = item['explanation']
-            print("saving " + phrase.word)
             phrase.save_if_not_exist()
 
 
@@ -60,7 +59,7 @@ def save_riddle():
 
 
 if __name__ == '__main__':
-    # read_and_save_idiom()
-    # save_word()
-    # save_phrase()
+    read_and_save_idiom()
+    save_word()
+    save_phrase()
     save_riddle()

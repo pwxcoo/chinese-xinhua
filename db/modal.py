@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, UniqueConstraint
 
 from db import Base, Session
 
 
 class CRUDMixin(object):
-    id = Column(Integer, primary_key=True, autoincrement=True)
+    id = Column(Integer, primary_key=True)
     session = Session()
 
     @classmethod
@@ -66,9 +66,13 @@ class Word(CRUDMixin, Base):
     radicals = Column(String(50))
     explanation = Column(String(2048))
     more = Column(String(2048))
+    __table_args__ = (
+        UniqueConstraint('word', 'pinyin'),
+        {},
+    )
 
     def save_if_not_exist(self):
-        indb = self.session.query(Word).filter_by(word=self.word).first()
+        indb = self.session.query(Word).filter_by(word=self.word).filter_by(pinyin=self.pinyin).first()
         if not indb:
             print("saving " + self.word)
             self.save()
@@ -103,5 +107,5 @@ class Riddle(CRUDMixin, Base):
         else:
             print("already in db " + self.riddle)
 
-    def query(self,word):
+    def query(self, word):
         return self.session.query(Riddle).filter(Riddle.riddle.ilike('%{}%'.format(word)))
