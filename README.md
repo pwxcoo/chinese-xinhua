@@ -92,6 +92,7 @@ chinese-xinhua/
 
 # API 接口
 `GET`、`POST`均可。用`GET`做示例，`POST`同理。返回数据格式为`JSON`。
+
 ## 成语
 
 ### 示例1（直接请求成语）：
