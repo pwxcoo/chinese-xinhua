@@ -4,7 +4,7 @@
 import json
 
 from db import engine, Base
-from db.modal import Idiom, Word, Phrase, Riddle
+from db.model import Idiom, Word, Phrase, Riddle
 
 Base.metadata.create_all(engine)
 
