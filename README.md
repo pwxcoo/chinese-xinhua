@@ -2,8 +2,6 @@
 
 中华新华字典数据库和 API 。收录包括 14032 条歇后语，16142 个汉字，264434 个词语，31648 个成语。
 
-对性能没需求的话，可以用我的新华字典 API 。所有的数据放在 `data/` 目录。
-
 ## Project Structure
 
 ```
@@ -93,68 +91,15 @@ chinese-xinhua/
 ]
 ```
 
-## API Interfaces
+## Changelog
 
-`GET`、`POST` 均可。用 `GET` 做示例，`POST` 同理。返回数据格式为 `JSON`。
+<details><summary>查看更新日志  </summary> 
 
-### 成语
-
-<details><summary>示例1（直接请求成语） </summary> 
-
-需要两个参数
-- `type=idiom` 表示需要请求成语
-- `word=兴高采烈 ` 表示请求的成语
-```
-https://www.pwxcoo.com/dictionary?type=idiom&word=兴高采烈   
-```
-[示例一](https://www.pwxcoo.com/dictionary?type=idiom&word=%E5%85%B4%E9%AB%98%E9%87%87%E7%83%88)
+- 20181216: API 功能下线。
+- 20180803: 添加词语数据集
+- 20180206: 添加成语，歇后语，汉字数据集
 
 </details>
-
-
-<details><summary>示例2 (请求拼音首字母缩写) </summary> 
-
-需要两个参数
-- `type=idiom` 表示需要请求成语
-- `abbreviation=xgcl` 表示请求的成语拼音首字母缩写
-```
-https://www.pwxcoo.com/dictionary?type=idiom&abbreviation=xgcl   
-```
-[示例二](https://www.pwxcoo.com/dictionary?type=idiom&abbreviation=xgcl)
-
-</details>
-
-### 歇后语
-
-<details><summary>示例1（请求歇后语) </summary> 
-
-需要两个参数
-- `type=xiehouyu` 表示需要请求歇后语
-- `riddle=王婆 ` 表示请求的歇后语的语面。可以模糊匹配
-```
-https://www.pwxcoo.com/dictionary?type=xiehouyu&riddle=王婆   
-```
-
-[示例一](https://www.pwxcoo.com/dictionary?type=xiehouyu&riddle=%E7%8E%8B%E5%A9%86)
-
-</details>
-
-
-
-### 汉字
-
-<details><summary>示例1 (直接请求汉字)  </summary> 
-
-需要两个参数
-- `type=word` 表示需要请求汉字
-- `word=吴` 表示请求的汉字
-```
-https://www.pwxcoo.com/dictionary?type=word&word=吴   
-```
-[示例一](https://www.pwxcoo.com/dictionary?type=word&word=%E5%90%B4)
-
-</details>
-
 
 
 ## Copyright
