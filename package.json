@@ -1,0 +1,7 @@
+{
+  "name": "xinhua-crossword",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node --test --test-isolation=none tests/engine.test.js", "start": "python3 -m http.server 8000 --bind 0.0.0.0"}
+}
