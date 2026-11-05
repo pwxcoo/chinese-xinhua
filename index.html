@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>字间 · 纵横字谜</title><link rel="stylesheet" href="web/style.css"></head>
+<body>
+<header><a class="brand" href="./"><span class="seal">字</span> 字间 <small>纵横字谜</small></a><span class="edition">新华词库 · VOL. 01</span><button id="help">玩法说明 ↗</button></header>
+<main>
+<section class="intro"><div><p class="eyebrow">让文字相遇，让灵感交汇</p><h1>一字相逢，<em>纵横皆意。</em></h1><p class="subtitle">沿着释义寻找答案，在交叉处发现新的线索。</p></div><div class="intro-mark" aria-hidden="true">纵<br>横<span>汉字的另一种风景</span></div></section>
+<div class="toolbar"><div class="level-controls"><label for="difficulty">字林漫游</label><select id="difficulty"><option value="0">初入字林 · 简单</option><option value="1">渐入佳境 · 中等</option><option value="2">纵横高手 · 困难</option></select><select id="level" aria-label="选择关卡"></select></div><span id="progress"></span></div>
+<section class="workspace"><div class="board-panel"><div class="board-heading"><span id="chapter"></span><span class="direction-hint">点击交叉格，切换方向</span></div><div class="board-scroll"><div id="board" role="group" aria-label="填词棋盘"></div></div><div class="board-footer"><span><i class="dot"></i> 预填汉字</span><span id="filled"></span><button id="reset">重新开始</button></div></div>
+<aside><div class="clue-card"><p class="eyebrow" id="clue-label"></p><h2 id="clue-title">循字寻意</h2><p id="clue"></p><label class="answer-label" for="answer">填写当前词条</label><div class="answer-row"><input id="answer" type="text" autocomplete="off" placeholder="输入一个字或完整成语" aria-describedby="input-help"><button id="enter">填入</button></div><small id="input-help">从选中格开始填写，支持中文输入法。</small><div class="word-navigation"><button id="prev-word">← 上一条</button><button id="next-word">下一条 →</button></div></div><div class="tools"><button id="check">◎ 检查答案</button><button id="reveal">✧ 揭示一字</button></div><div id="candidate-panel"><p class="eyebrow">拾字成句 · 候选字</p><div id="candidates"></div></div><p id="message" role="status" aria-live="polite">不妨从已经出现的汉字出发。</p></aside></section>
+<section class="clue-section"><div class="section-heading"><h2>字里有线索</h2><p>每一次交叉，都是一份提示。</p></div><div class="clue-columns"><div><h3>→ 横向词条</h3><div id="across-list"></div></div><div><h3>↓ 纵向词条</h3><div id="down-list"></div></div></div></section>
+<footer><span>字间 <small>让好词相逢</small></span><p>词条来自 chinese-xinhua 开源词库 · 进度自动保存在此浏览器</p><a href="docs/requirements-v0.1.md">需求版本 v0.1</a></footer>
+</main>
+<dialog id="help-dialog"><h2>在交叉处，找到答案。</h2><p>横向从左到右，纵向从上到下。每个词条都是四字成语，交叉格共用同一个汉字。</p><p>选择词条查看释义，点击格子后输入汉字。再次点击交叉格切换方向。也可以一次填入整个成语。</p><p>方向键移动，退格键删除。简单模式提供候选字。检查会标出错误，揭示会公布选中格的答案。</p><p>共 30 关，分为三个难度；已解锁关卡可自由选择。通过上一关可解锁下一关。</p><button id="close-help">开始探索</button></dialog>
+<dialog id="win-dialog"><p class="eyebrow">字字珠玑 · 本关完成</p><h2>纵横之间，皆有答案。</h2><p id="result"></p><button id="next-level">继续下一关 →</button><button id="close-win">留在棋盘</button></dialog>
+<script type="module" src="web/app.js"></script>
+</body></html>
